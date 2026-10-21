@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bastion Host and SSH Keys on AWS – Visual Guide | #Buildwithsukhada</title>
+<meta name="description" content="Animated, beginner-friendly diagram of SSH key-based authentication from a bastion host to a private EC2 instance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>Bastion Host: SSH Keys Between Two EC2 Instances</h1>
+    <p>Reception area to server room on AWS (us-east-1), in 9 animated steps · <strong>#Buildwithsukhada</strong></p>
+  </div>
+  <button id="theme" type="button" aria-label="Toggle light and dark mode">Dark / Light</button>
+</header>
+<div class="app">
+  <aside aria-label="Steps"><ol id="steps"></ol></aside>
+  <main>
+    <div class="bar" role="group" aria-label="Playback controls">
+      <button id="prev" type="button">◀ Previous</button>
+      <button id="next" type="button">Next ▶</button>
+      <button id="auto" type="button" aria-pressed="false">▶ Auto-play (5s)</button>
+      <button id="reset" type="button">↺ Reset</button>
+      <span id="count" aria-live="polite"></span>
+    </div>
+    <div class="legend" id="legend" aria-label="Legend of moving objects"></div>
+    <div class="stage">
+      <svg id="diagram" viewBox="0 0 1100 620" role="img" aria-label="Animated diagram of SSH key authentication from a bastion host to a private EC2 instance" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <section class="card" id="caption" aria-live="polite">
+      <h2 id="cTitle"></h2>
+      <h3>In plain words</h3><p id="cPlain"></p>
+      <h3>Technical explanation</h3><p id="cTech"></p>
+      <h3>Watch the animation</h3><p id="cWatch"></p>
+    </section>
+    <section class="card" id="cmdCard" hidden>
+      <h2>Commands</h2>
+      <div id="cmds"></div>
+      <div id="troubleBox" hidden><h3>Troubleshooting</h3>
+        <table class="tr"><thead><tr><th scope="col">Symptom</th><th scope="col">What to check</th></tr></thead><tbody id="trouble"></tbody></table>
+      </div>
+    </section>
+  </main>
+</div>
+<footer>Tip: use the ← and → keys to change steps · Made with HTML, CSS and JavaScript · #Buildwithsukhada · MIT License</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
